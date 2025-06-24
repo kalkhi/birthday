@@ -119,6 +119,40 @@ button.next {
     right: 5px;
   }
 }
+@media screen and (max-width: 500px) {
+  .slider {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .card {
+    border-radius: 10px;
+  }
+
+  .imgBx img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .content {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  button.prev,
+  button.next {
+    font-size: 22px;
+    padding: 8px 12px;
+    top: 50%;
+  }
+
+  button.prev {
+    left: -20px;
+  }
+
+  button.next {
+    right: -20px;
+  }
+}
 
 
 
