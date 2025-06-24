@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Rotating Image Gallery</title>
+  <link rel="stylesheet" href="script.css" />
+</head>
+<body>
+
+  <audio id="bgMusic" loop hidden>
+    <source src="song.mp3" type="audio/mpeg" />
+  </audio>
+
+  
+
+  <h1 style="color:goldenrod; position: fixed; top: 60px; left: 50%; transform: translateX(-50%); font-family: sans-serif;">
+    Happy Birthday Raa
+  </h1>
+
+  <div class="box">
+    <span style="--i:1;"><img src="img1.jpeg" /></span>
+    <span style="--i:2;"><img src="img2.jpeg" /></span>
+    <span style="--i:3;"><img src="img3.jpeg" /></span>
+    <span style="--i:4;"><img src="img4.jpeg" /></span> ✅
+    <span style="--i:5;"><img src="img5.jpeg" /></span>
+    <span style="--i:6;"><img src="img6.jpeg" /></span>
+    <span style="--i:7;"><img src="img7.jpeg" /></span>
+    <span style="--i:8;"><img src="img4.jpeg" /></span>
+  </div>
+
+  <div class="button-con">
+    <button class="music-btn" onclick="playMusic()">Play Music</button>
+
+  <button class="gallery-btn" onclick="openGallery()">Open Gallery</button>
+  </div>
+
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById('bgMusic');
+      audio.play().then(() => {
+        console.log("Music started!");
+      }).catch((err) => {
+        console.log("Autoplay blocked or error:", err);
+        alert("Please click the button to allow music.");
+      });
+    }
+  
+    function openGallery() {
+      const audio = document.getElementById('bgMusic');
+      audio.pause(); // Stop music
+      audio.currentTime = 0; // Reset to start (optional)
+      window.location.href = "gallerystore.html";
+    }
+  
+    let box = document.querySelector('.box');
+    window.onmousemove = function (e) {
+      let x = e.clientX / 3;
+      box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+    };
+  </script>
+  
+
+ 
+
+
+</body>
+</html>
+
+

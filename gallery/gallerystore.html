@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery Slider</title>
+  <link rel="stylesheet" href="in.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="slider">
+    <button class="prev" onclick="showPrev()">&#10094;</button>
+
+    <div class="card-container">
+      <div class="card active">
+        <div class="imgBx">
+          <img src="img8.jpeg" alt="Image 1" />
+        </div>
+        <div class="content">
+          <h2>Happy</h2>
+          <p>Happy birthday Pandhi! 23 years and growing stronger every day!</p>
+        </div>
+        <audio src="song5.mp3"></audio>
+      </div>
+
+      <!-- FIXED: class name from Happy → card -->
+      <!-- FIXED: audio file name from song1mp3 → song1.mp3 -->
+      <div class="card">
+        <div class="imgBx">
+          <img src="img12.jpeg" alt="Image 2" />
+        </div>
+        <div class="content">
+          <h2>Birthday</h2>
+          <p>Wishing you happiness, success, and all the best!</p>
+        </div>
+        <audio src="song1.mp3"></audio>
+      </div>
+
+      <div class="card">
+        <div class="imgBx">
+          <img src="img13.jpeg" alt="Image 3" />
+        </div>
+        <div class="content">
+          <h2>To</h2>
+          <p>Keep smiling and shining always. You are awesome!</p>
+        </div>
+        <audio src="song2.mp3"></audio>
+      </div>
+
+      <div class="card">
+        <div class="imgBx">
+          <img src="img9.jpeg" alt="Image 4" />
+        </div>
+        <div class="content">
+          <h2>You</h2>
+          <p>Another year, another chance to grow and glow!</p>
+        </div>
+        <audio src="song3.mp3"></audio>
+      </div>
+
+      <div class="card">
+        <div class="imgBx">
+          <img src="img15.jpeg" alt="Image 5" />
+        </div>
+        <div class="content">
+          <h2>Pandhi</h2>
+          <p>lots of love for you .enjoy and capture every moment ,make beautiful memories</p>
+        </div>
+        <audio src="song4.mp3"></audio>
+      </div>
+    </div>
+
+    <button class="next" onclick="showNext()">&#10095;</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="in.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

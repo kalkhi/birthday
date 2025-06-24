@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  background-image: url(hi.gif);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider {
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.card.active {
+  display: flex;
+}
+
+.imgBx {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.imgBx img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px 15px 0 0;
+}
+
+/* Content - hidden initially */
+.content {
+  padding: 0 20px;
+  color: #fff;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.card:hover .content {
+  opacity: 1;
+  padding: 20px;
+  max-height: 500px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  background-color: rgba(255, 255, 255, 0.2);  /* ✅ changed */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;      /* ✅ changed */
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(255, 255, 255, 0.4);  /* ✅ changed */
+}
+
+button.prev {
+  left: -50px;
+}
+
+button.next {
+  right: -50px;
+}
+
+
+/* Responsive */
+@media (max-width: 400px) {
+  .slider {
+    width: 90%;
+  }
+
+  button.prev, button.next {
+    left: 5px;
+    right: 5px;
+  }
+}
+
+
+
+

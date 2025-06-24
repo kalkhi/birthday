@@ -1,0 +1,1 @@
+{"name": "Birthday App", "short_name": "BirthdayApp", "start_url": "index.html", "display": "standalone", "background_color": "#ffffff", "theme_color": "#ff69b4", "icons": [{"src": "cake.jpg", "sizes": "192x192", "type": "image/png"}]}

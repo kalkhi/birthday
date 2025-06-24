@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Pandhi</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log("Service Worker Registered"));
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop hidden>
+    <source src="happy.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="cake-container">
+    <div class="plate"></div>
+    <div class="cake">
+      <div class="tier tier4">
+        <div class="cream"></div>
+        <div class="candle" onclick="blowCandle()">
+          <div class="flame" id="flame"></div>
+        </div>
+      </div>
+      <div class="tier tier3"></div>
+      <div class="tier tier2"></div>
+      <div class="tier tier1"></div>
+    </div>
+    
+    <div>
+      <h1 id="wishHeading" class="hidden">Happy Birthday Pandhi </h1>
+      <p id="wishMessage" class="hidden">
+        "Happy Birthday! May your year be filled with success, happiness, and good health. Stay the same kind and genuine person you’ve always been."
+      </p>
+    </div>
+  </div>
+
+  <button onclick="openGallery()">ARE YOU READY</button>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById('bgMusic');
+      audio.play().then(() => {
+        console.log("Music started!");
+      }).catch((err) => {
+        console.log("Autoplay blocked or error:", err);
+        alert("Please click to allow music.");
+      });
+    }
+
+    function blowCandle() {
+      document.getElementById("flame").style.display = "none";
+      document.getElementById("wishHeading").classList.remove("hidden");
+      document.getElementById("wishMessage").classList.remove("hidden");
+      playMusic();
+    }
+
+    function openGallery() {
+      const audio = document.getElementById('bgMusic');
+      audio.pause();
+      audio.currentTime = 0;
+      window.open("gallery/gallery.html", "_blank");
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
